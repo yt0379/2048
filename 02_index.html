@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <title>T2048</title>
+        <link type="text/css" href="2048.css" rel="Stylesheet" />
+        <script type="text/javascript" src="02_2048.js"></script>
+    </head>
+    <body>
+        <!--用于操作的按钮-->
+        <table id="control">
+            <tr>
+                <td></td>
+                <td><input  type="button" value="up" onclick="upAction();"/></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input  type="button" value="left" onclick="leftAction();"/></td>
+                <td></td>
+                <td><input  type="button" value="right" onclick="rightAction();"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input  type="button" value="down" onclick="downAction();"//></td>
+                <td></td>
+            </tr>
+        </table>
+        <header><h1>2048</h1></header>
+        <div id="gamePanel">
+            <p><a class="button" id="newGame">New Game</a> Score: <span id="score">0</span></p>
+            <div id="gridPanel">
+                <!--背景的格子-->
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+                <div class="grid"></div>
+
+                <!--带数字的格子-->
+	   	        <div class="cell num2" id="cell00" >2</div>
+	            <div class="cell num4" id="cell01" >4</div>
+	            <div class="cell num8" id="cell02" >8</div>
+	            <div class="cell num16" id="cell03" >16</div>
+	    
+	   	        <div class="cell num32" id="cell10" >32</div>
+	            <div class="cell num64" id="cell11" >64</div>
+	            <div class="cell num128" id="cell12" >128</div>
+	            <div class="cell num256" id="cell13" >256</div>
+		
+		        <div class="cell num512" id="cell20" >512</div>
+	            <div class="cell num1024" id="cell21" >1024</div>
+	            <div class="cell num2048" id="cell22" >2048</div>
+	            <div class="cell num4096" id="cell23" >4096</div>
+
+		        <div class="cell num8192" id="cell30" >8192</div>
+	            <div class="cell " id="cell31" > </div>
+	            <div class="cell " id="cell32" > </div>
+	            <div class="cell " id="cell33" > </div> 
+            </div>
+            <div id="gameOver">
+                <div>
+                    <!--背景 -->
+                </div>
+                <p>
+                    <!-- 前景 -->
+                    Game Over!<br>
+                    Score: <span id="finalScore">0</span><br>
+                    <a class="button" id="restart" onclick="startAction();">Try Again!</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
